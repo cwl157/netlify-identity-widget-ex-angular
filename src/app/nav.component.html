@@ -15,7 +15,7 @@
           <a class="nav-link" routerLink="protected" routerLinkActive="active">Protected Page</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="" *ngIf="netlifyService.get().currentUser() === null" (click)="openModal()">Login</a>
+          <a class="nav-link" [routerLink]="" *ngIf="netlifyService.get().currentUser() === null" (click)="openModal()">Login / Sign Up</a>
           <a class="nav-link" *ngIf="netlifyService.get().currentUser()">Welcome {{netlifyService.get().currentUser().email}}</a>
         </li>
         <li class="nav-item" *ngIf="netlifyService.get().currentUser()">
