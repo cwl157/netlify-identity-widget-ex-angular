@@ -12,30 +12,10 @@
 </head>
 <body>
    <script>
-     console.log(top.window.location.hash);
-     if (top.window.location.hash.indexOf("recovery_token=") === -1 && top.window.location.hash.indexOf("confirmation_token") === -1) {
-       top.window.location = "/app";
-     }
-     
-      netlifyIdentity.on('init', function(user) {
-        console.log('init', user);
-      });
-
-      netlifyIdentity.on('login', function(user) {   
-        console.log('current user', netlifyIdentity.currentUser());
-      });
-
-      netlifyIdentity.on('logout', function() {
-        console.log('Logged out'); 
-      });
-
-      netlifyIdentity.on('error', function(err) {
-        console.error('Error', err)
-      }); 
-
-      netlifyIdentity.on('open', function() {
-        console.log('Widget opened')
-      });
+      console.log(top.window.location.hash);
+      if (top.window.location.hash.indexOf("recovery_token=") === -1 && top.window.location.hash.indexOf("confirmation_token") === -1) {
+         top.window.location = "/app";
+      }
 
       netlifyIdentity.on('close', function() {
         console.log('Widget closed');
